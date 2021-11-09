@@ -1,0 +1,7 @@
+.self-nav {
+    background-color: rgba(18, 77, 238, 0.288);
+}
+
+.link-hover:hover {
+    border-bottom: 5px solid #7AC64D;
+}

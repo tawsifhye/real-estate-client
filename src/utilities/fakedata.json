@@ -1,0 +1,39 @@
+ [
+    {
+        "title": "Athens Greece",
+        "description": "Welcome to Athens, the historical capital of Europe. Welcome to the birthplace of democracy, arts, science and philosophy of western civilisation.  Home of Plato, Socrates, Pericles, Euripides, Sophocles, Aeschylus.  Athens is one of the world’s oldest cities. It’s recorded history spanning around 3.400 years and it is being inhabited since the 11th millennium B.C. E.  Today, under the shadow of Parthenon, the contemporary urban scenery of the sprawling city reflects its exciting history, its multi- cultural modern personality as well as the infrastructure and facilities.The perfect Mediterranean climate with the legendary greek sunlight, the unique combination of glorious history with modern, urban innovation, the coexistence of great culture with astonishing natural beauty, the high standard hotel accommodation, modern means of transportation such as the cutting edge modern metro, the vibrant rhythm of life, the wide choice of opportunities for shopping, dining and night life and of course the warmth of the Athenians people feature Athens as the ideal all year round city break destination. The city of Parthenon is an open air museum. A large part of the town’s historic center has been converted into a 3 km pedestrian zone, one of the largest in Europe. It leads to the major archaeological sites (“archaeological park”), reconstructing – to a large degree – the ancient landscape. Either on foot or by bike, the ‘’Grande Promenade’’ around Acropolis is an unforgettable journey through history.",
+        "price": "450",
+        "thumb": "https://i.ibb.co/KszMXVb/athens.jpg"
+    },
+    {
+        "title": "Family Tour in Thailand",
+        "description": "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin",
+        "price": "550",
+        "thumb": "https://i.ibb.co/89SWjQG/thailand.jpg"
+    },
+    {
+        "title": "Philippines",
+        "description": "If tropical islands, beautiful landscapes, and unending adventure are in your bucket list for a holiday trip, then you have found a gem of a destination with the Philippines.The Philippines has over 7,000 islands and is the perfect getaway to experience a mix of nature, culture, and fun. Whether you're headed to Luzon, Visayas, Mindanao, expect beautiful sights, unique attractions, friendly locals, and memorable experiences.Paradise-like beaches, idyllic islands in turquoise waters, the world’s most perfect cone volcano, the smallest primate, world-class surfing spots, and centuries-old Spanish fortresses—these are but some of the attractions awaiting you on your Philippine holiday.",
+        "price": "500",
+        "thumb": "https://i.ibb.co/zxpNCbk/philippines.jpg"
+    },
+    {
+        "title": "Maldives",
+        "description": "Unbeatable beaches, unmatched luxury and a very happening underwater world makes Maldives worth it all! Endowed with incredible beauty and splendor of nature. With 1200 islands and 26 atolls, this island country holds a great allure for tourists across the globe for its exotic islands, enthralling blue seas, shiny-sandy beaches, magnificent reefs, and a variety of water sports. Being an island country dominated by water sports, the tourism here is strictly relative to the dry weather conditions and hence the span of December to April is the best time to visit Maldives. Maldives has also undergone drastic change in the last 10 years and the inhabited islands have been made better and tourist friendly. Studded with luxurious water villas and endless palm groves swaying rhythmically, this postcard-perfect amalgamation of blue, white, and green is a true paradise on Earth!",
+        "price": "550",
+        "thumb": "https://i.ibb.co/FH252TZ/maldives.jpg"
+    },
+    {
+        "title": "Cox's Bazar Bangladesh",
+        "description": "Cox's Bazar is famous for its long natural sandy sea beach. I have been to Cox's Bazar in all seasons and many times over the last 20 years or so. And I would love to share my practical experience with you! Even 20 years ago Cox's Bazar was relatively a small town. There were lots of hotels, motels and guest houses for tourists' accommodations and restaurants for having a variety of great food still there at around that time. But, over the years Cox's Bazar has been transformed into a busy tourist city. It has more international visitors now than ever. The availability of more recreational facilities is attracting more tourists every year. Cox's Bazar has the world's largest unbroken sea beach which stretches more than 120 km. The entire beach is a stretch of golden sandy sea beach which is reachable by motorbike. The beach gets busy from November to early March. If you want to avoid the herd of both domestic and international tourists, then the best time to take a trip there would be between April and September, preferrably April and June",
+        "price": "300",
+        "thumb": "https://i.ibb.co/XtDMBsg/cox-s-bazar.jpg"
+    },
+    {
+        "title": "Goa Beach India",
+        "description": "Goa is one of the most favorite destination among Indian tourists due to its pristine beaches. Dotted with hundreds of impressive beaches in Goa, the incredible coastline of more than 100 km offers beautiful views and serenity where tourists enjoy and relax in the Sun. Every beach has its specialty, beauty, and serenity where tourists enjoy their best. Famous beaches in Goa: Baga, Candolim, Calangute, Morjim, Arambol, Anjuna, etc.",
+        "price": "450",
+        "thumb": "https://i.ibb.co/t4pVj3Z/goa.jpg"
+    }
+]
+

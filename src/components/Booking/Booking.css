@@ -1,0 +1,55 @@
+.booking-container {
+    background-color: #fff0b6;
+}
+
+.custom-font-booking {}
+
+.custom-font-booking h3 {
+    font-size: 200%;
+    border-left: 5px solid orangered;
+}
+
+.custom-font-booking p {
+    font-size: 100%
+}
+
+.booking-img-design img {
+    height: 30em;
+}
+
+.form-container {
+    height: 100vh;
+}
+
+.form-container input[type="submit"] {
+    background: #ec5990;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 20px;
+    font-size: 100%;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+.form-container label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-bottom: 13px;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.form-container input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

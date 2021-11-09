@@ -1,0 +1,15 @@
+.mybooking-container {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.mybooking-custom-font h1 {
+    font-size: 250%;
+}
+
+.mybooking-main-container {
+    flex: 1;
+}

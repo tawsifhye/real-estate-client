@@ -1,0 +1,17 @@
+.service-container {
+    margin-top: 10%;
+}
+
+.service-container-header {
+    padding: 5% 5% 0 5%;
+
+}
+
+.service-container .custom-font-home h1 {
+    font-size: 300%;
+}
+
+.service-container .custom-font-home p {
+    font-size: 110%;
+    font-weight: lighter;
+}
