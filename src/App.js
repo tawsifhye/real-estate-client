@@ -28,12 +28,6 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <PrivateRoute path='/mybookings'>
-              <MyBooking></MyBooking>
-            </PrivateRoute>
-            <PrivateRoute path='/allbookings'>
-              <AllBooking></AllBooking>
-            </PrivateRoute>
             <PrivateRoute path='/booking/:_id'>
               <Booking></Booking>
             </PrivateRoute>
