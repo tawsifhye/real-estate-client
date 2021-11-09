@@ -14,8 +14,11 @@ const Services = (props) => {
                     <div className="card-body">
                         <h5 className="card-title text-center fw-bold">{name}</h5>
                         <h6>{location}</h6>
-                        <div className="d-flex justify-content-between p-2">
-                            <p>{bed} BED {bath} BATH</p>
+                        <div className="d-flex justify-content-between align-items-center p-2">
+                            <div>
+                                <span className="text-success">Area:</span> {area}
+                                <p>{bed} BED {bath} BATH</p>
+                            </div>
                             <p className="text-end fw-bold text-success">${price}</p>
                         </div>
                     </div>
