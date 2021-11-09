@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './SingleService.css'
 const Services = (props) => {
 
-    const { _id, name, location, area, bath, bed, price } = props.property;
+    const { _id, name, location, area, bath, bed, price, img } = props.property;
     console.log(props.property);
     return (
         <>
             <div className="col">
                 <div className="card card-design shadow-sm">
-                    <img src="" className="card-img-top img-fluid" alt="..." />
+                    <img src={img} className="card-img-top img-fluid p-1 rounded-2" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title text-center fw-bold">{name}</h5>
                         <h6>{location}</h6>
