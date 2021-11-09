@@ -10,6 +10,7 @@ import Booking from "./components/Booking/Booking";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import MyBooking from "./components/MyBooking/MyBooking";
 import AllBooking from "./components/AllBooking/AllBooking";
+import Services from "./components/SingleService/SingleService";
 
 function App() {
 
