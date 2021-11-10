@@ -45,6 +45,16 @@ const Header = () => {
                                     Home
                                 </HashLink>
                             </li>
+                            <li className="nav-item me-3">
+                                <Link
+                                    className="nav-link active 
+                                link-hover"
+                                    aria-current="page"
+                                    to="/exploreproperties"
+                                >
+                                    Explore Properties
+                                </Link>
+                            </li>
                             {/*  {user.email && (
                                 <li className="nav-item me-3">
                                     <Link
