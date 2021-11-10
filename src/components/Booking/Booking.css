@@ -15,11 +15,11 @@
     height: 30em;
 }
 
-.form-container {
+.booking-form-container {
     height: 100vh;
 }
 
-.form-container input[type="submit"] {
+.booking-form-container input[type="submit"] {
     background: #1544df;
     color: white;
     text-transform: uppercase;
@@ -30,7 +30,7 @@
     letter-spacing: 10px;
 }
 
-.form-container label {
+.booking-form-container label {
     line-height: 2;
     text-align: left;
     display: block;
@@ -41,7 +41,7 @@
     font-weight: 200;
 }
 
-.form-container input {
+.booking-form-container input {
     display: block;
     box-sizing: border-box;
     width: 100%;

@@ -5,7 +5,7 @@ import SingleServices from "../SingleService/SingleService"
 const ExploreServices = () => {
     const [properties, setProperties] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/properties')
+        fetch('https://obscure-river-28202.herokuapp.com/properties')
             .then(res => res.json())
             .then(data => setProperties(data))
     }, [])
