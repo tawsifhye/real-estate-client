@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import SingleServices from '../SingleService/SingleService'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import Bounce from 'react-reveal/Bounce';
+import SingleServices from '../SingleService/SingleService'
 import './Services.css'
+
 const Services = () => {
     const [properties, setProperties] = useState([]);
     useEffect(() => {
@@ -29,6 +33,15 @@ const Services = () => {
                         </SingleServices>))}
                     </div>
                 </div>
+                <div className="text-center">
+                    <Link to='/exploreproperties'>
+                        <button className="btn btn-success">
+                            Explore Our Services
+                            <span className="ms-2"><FontAwesomeIcon icon={faArrowAltCircleRight} /></span>
+                        </button>
+                    </Link>
+                </div>
+
             </div>
         </>
     );

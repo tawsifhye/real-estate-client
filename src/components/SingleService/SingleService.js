@@ -24,7 +24,7 @@ const Services = (props) => {
                     </div>
                     <div className="mx-auto pb-2">
                         <Link to={`/booking/`}>
-                            <button className="fw-bold btn btn-primary">Book Home</button>
+                            <button className="fw-bold btn btn-primary">Buy Home</button>
                         </Link>
                     </div>
                 </div>

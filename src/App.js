@@ -11,6 +11,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import MyBooking from "./components/MyBooking/MyBooking";
 import AllBooking from "./components/AllBooking/AllBooking";
 import Services from "./components/SingleService/SingleService";
+import ExploreServices from "./components/ExploreServices/ExploreServices";
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path='/login'>
               <Login></Login>
+            </Route>
+            <Route path="/exploreproperties">
+              <ExploreServices></ExploreServices>
             </Route>
             <PrivateRoute path='/booking/:_id'>
               <Booking></Booking>

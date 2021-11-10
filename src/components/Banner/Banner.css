@@ -1,0 +1,15 @@
+.custom-font-banner h5 {
+    font-size: 400%;
+}
+
+.custom-font-banner p {
+    font-size: 130%;
+}
+
+.banner-img {
+    height: 100vh;
+}
+
+.banner-title {
+    background-color: rgba(128, 128, 128, 0.527);
+}
