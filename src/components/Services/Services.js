@@ -13,7 +13,6 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setProperties(data))
     }, [])
-    console.log(properties);
     return (
         <>
             <div className='service-container'>

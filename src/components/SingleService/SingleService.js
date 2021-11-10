@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './SingleService.css'
 const Services = (props) => {
 
@@ -23,7 +22,7 @@ const Services = (props) => {
                         </div>
                     </div>
                     <div className="mx-auto pb-2">
-                        <Link to={`/booking/`}>
+                        <Link to={`/booking/${_id}`}>
                             <button className="fw-bold btn btn-primary">Buy Home</button>
                         </Link>
                     </div>
