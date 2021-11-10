@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import Booking from "./components/Booking/Booking";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ExploreServices from "./components/ExploreServices/ExploreServices";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
 
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <PrivateRoute path='/booking/:_id'>
               <Booking></Booking>
+            </PrivateRoute>
+            <PrivateRoute path='/dashboard'>
+              <Dashboard />
             </PrivateRoute>
             <Route path='*'>
               <NotFound></NotFound>

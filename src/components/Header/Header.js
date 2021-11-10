@@ -5,8 +5,8 @@ import useAuth from '../../hooks/useAuth'
 import logo from '../../images/logo.png'
 import "./Header.css"
 const Header = () => {
-    const { user, logOut, admin } = useAuth();
-    console.log(admin);
+    const { user, logOut } = useAuth();
+    // console.log(admin);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light self-nav">
@@ -55,37 +55,13 @@ const Header = () => {
                                     Explore Properties
                                 </Link>
                             </li>
-                            {/*  {user.email && (
-                                <li className="nav-item me-3">
-                                    <Link
-                                        className="nav-link active 
-                                link-hover"
-                                        aria-current="page"
-                                        to="/mybookings"
-                                    >
-                                        My Bookings
-                                    </Link>
-                                </li>
-                            )}
                             {user.email && (
                                 <li className="nav-item me-3">
                                     <Link
                                         className="nav-link active 
                                 link-hover"
                                         aria-current="page"
-                                        to="/allbookings"
-                                    >
-                                        Manage All Bookings
-                                    </Link>
-                                </li>
-                            )} */}
-                            {user.email && (
-                                <li className="nav-item me-3">
-                                    <Link
-                                        className="nav-link active 
-                                link-hover"
-                                        aria-current="page"
-                                        to="/allbookings"
+                                        to="/dashboard"
                                     >
                                         Dash Board
                                     </Link>

@@ -1,0 +1,8 @@
+.user-route li:hover {
+    cursor: pointer;
+}
+
+.user-route li:active {
+    background-color: rgb(147, 172, 172);
+    color: white;
+}
