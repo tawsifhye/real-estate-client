@@ -4,9 +4,9 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  sendEmailVerification,
   sendPasswordResetEmail,
   onAuthStateChanged,
+  updateProfile,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -15,21 +15,27 @@ initializeAuthentication();
 const GoogleProvider = new GoogleAuthProvider();
 
 const useFirebase = () => {
+
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLogin, setIsLogin] = useState(false);
   const auth = getAuth();
 
   //google sign in
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignIn = (location, history) => {
     setIsLoading(true);
     return signInWithPopup(auth, GoogleProvider)
       .then((result) => {
         const user = result.user;
         setUser(user);
+      })
+      .then(result => {
+        const redirect_uri = location.state?.from || "/home";
+        history.push(redirect_uri);
       })
       .catch((error) => {
         setError(error.message);
@@ -40,51 +46,65 @@ const useFirebase = () => {
     setEmail(e.target.value);
   };
 
+  const handleNameChange = (e) => {
+    setName(e.target.value)
+  }
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleRegistration = (e) => {
-    e.preventDefault();
+  const handleRegistration = (location, history) => {
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
       return;
     }
-    isLogin ? processLogin(email, password) : registerNewUser(email, password);
+    isLogin ? processLogin(email, password, location, history) : registerNewUser(email, password, history);
   };
 
-  const processLogin = (email, password) => {
-      return signInWithEmailAndPassword(auth, email, password)
+  const processLogin = (email, password, location, history) => {
+    setIsLoading(true)
+    signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
         setError("");
+        const redirect_uri = location.state?.from || "/home";
+        history.push(redirect_uri);
       })
       .catch((error) => {
         setError(error.message);
       })
       .finally(() => {
-        window.location.reload();
+        setIsLoading(false)
+        // window.location.reload();
       });
   };
 
-  const registerNewUser = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password)
+  const registerNewUser = (email, password, history) => {
+    setIsLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        verifyEmail();
+        const newUser = { email, displayName: name };
+        setUser(newUser);
+        // send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+        }).catch((error) => {
+        });
+        history.replace('/')
+        // history.push("/home");
       })
       .catch((error) => {
         setError(error.message);
       })
       .finally(() => {
-        window.location.reload();
+        setIsLoading(false);
+        // window.location.reload();
       });
   };
-  const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser).then((result) => {
-      setError("Email Sent Please verify");
-    });
-  };
+
   const handleResetPassword = () => {
     sendPasswordResetEmail(auth, email)
       .then((result) => {
@@ -126,8 +146,10 @@ const useFirebase = () => {
     user,
     email,
     error,
+    name,
     handleGoogleSignIn,
     handleEmailChange,
+    handleNameChange,
     handlePasswordChange,
     handleRegistration,
     processLogin,

@@ -6,7 +6,7 @@ import logo from '../../images/logo.png'
 import "./Header.css"
 const Header = () => {
     const { user, logOut } = useAuth();
-    // console.log(user);
+    console.log(user);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light self-nav">

@@ -5,27 +5,28 @@ import useAuth from "../../hooks/useAuth";
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./Login.css";
+import { useState } from "react";
 const Login = () => {
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/home";
 
   const {
-    handleGoogleSignIn, handleRegistration, processLogin, isLogin, handleEmailChange, handlePasswordChange, toggleLogin, user, error, handleResetPassword } = useAuth();
-
-  const googleSignIn = () => {
-    handleGoogleSignIn()
-      .then((result) => {
-        history.push(redirect_uri);
-      })
+    handleGoogleSignIn, handleRegistration, processLogin, isLogin, handleEmailChange, handleNameChange, handlePasswordChange, toggleLogin, user, error, handleResetPassword } = useAuth();
+  const emailPasswdAuth = (e) => {
+    handleRegistration(location, history)
+    e.preventDefault();
   }
+  const googleSignIn = () => {
+    handleGoogleSignIn(location, history)
+  }
+
 
   return (
     <>
       <Header />
       <div className="form-container d-flex justify-content-center align-items-center my-5">
         <div className="mx-5 my-2">
-          <form className="container" onSubmit={handleRegistration}>
+          <form className="container" onSubmit={emailPasswdAuth}>
             <h3 className="text-primary">
               Please {isLogin ? "Login" : "Register"}
             </h3>
@@ -45,6 +46,24 @@ const Login = () => {
                   required
                 />
               </div>
+              {!isLogin && (<div>
+                <label
+                  htmlFor="input"
+                  className="col-sm-2 col-form-label me-2"
+                >
+                  Name
+                </label>
+                <div className="col-sm-10">
+                  <input
+                    onBlur={handleNameChange}
+                    type="text"
+                    className="form-control"
+                    id="inputEmail3"
+                    required
+                  />
+                </div>
+              </div>)
+              }
             </div>
             <div className="row mb-3">
               <label
