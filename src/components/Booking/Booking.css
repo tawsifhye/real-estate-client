@@ -1,6 +1,4 @@
-.booking-container {
-    background-color: #fff0b6;
-}
+.booking-container {}
 
 .custom-font-booking {}
 
@@ -22,11 +20,11 @@
 }
 
 .form-container input[type="submit"] {
-    background: #ec5990;
+    background: #1544df;
     color: white;
     text-transform: uppercase;
     border: none;
-    padding: 20px;
+    padding: 10px 20px;
     font-size: 100%;
     font-weight: 100;
     letter-spacing: 10px;
@@ -48,8 +46,13 @@
     box-sizing: border-box;
     width: 100%;
     border-radius: 4px;
-    border: 1px solid white;
+    border: 2px solid black;
     padding: 10px 15px;
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+.card-img-top {
+    height: 25em;
+    object-fit: cover;
 }

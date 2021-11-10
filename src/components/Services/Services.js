@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
-import Bounce from 'react-reveal/Bounce';
 import SingleServices from '../SingleService/SingleService'
 import './Services.css'
 

@@ -4,7 +4,6 @@ import './SingleService.css'
 const Services = (props) => {
 
     const { _id, name, location, area, bath, bed, price, img } = props.property;
-    console.log(props.property);
     return (
         <>
             <div className="col">
