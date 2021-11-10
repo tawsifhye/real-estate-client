@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import SingleServices from "../SingleService/SingleService"
 const ExploreServices = () => {
     const [properties, setProperties] = useState([]);
@@ -9,8 +11,9 @@ const ExploreServices = () => {
     }, [])
     return (
         <>
+            <Header />
             <div>
-                <h1 className="text-center mt-3">Our Properties</h1>
+                <h1 className="text-center mt-3">Our Projects</h1>
                 < div className="container-fluid row mx-auto">
                     {!properties && (<div className="text-center">
                         <div class="spinner-grow text-danger text-center" role="status">
@@ -23,6 +26,7 @@ const ExploreServices = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
 
     );

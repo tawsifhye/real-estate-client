@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div>
+
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -16,6 +17,7 @@ const Banner = () => {
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div className="carousel-inner">
+
                     <div className="carousel-item active">
                         <img src={banner1} className="d-block w-100 banner-img" alt="..." />
                         <div className="carousel-caption d-md-block custom-font-banner banner-title">

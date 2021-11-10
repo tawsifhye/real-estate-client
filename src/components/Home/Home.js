@@ -4,11 +4,14 @@ import './Home.css'
 import OurAgent from '../OurAgent/OurAgent';
 import Services from '../Services/Services';
 import Banner from '../Banner/Banner';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
 
     return (
         <>
+            <Header></Header>
             <Banner></Banner>
             {/* Service Section Starts*/}
             <div id="service" className="">
@@ -17,6 +20,7 @@ const Home = () => {
             {/* service Section Ends */}
             <Review></Review>
             <OurAgent></OurAgent>
+            <Footer></Footer>
         </>
     );
 };
