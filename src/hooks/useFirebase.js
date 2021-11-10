@@ -32,6 +32,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        saveUser(user.email, user.displayName, 'PUT');
       })
       .then(result => {
         const redirect_uri = location.state?.from || "/home";
@@ -87,6 +88,8 @@ const useFirebase = () => {
       .then((result) => {
         const newUser = { email, displayName: name };
         setUser(newUser);
+        //save user to database
+        saveUser(email, name, 'POST');
         // send name to firebase after creation
         updateProfile(auth.currentUser, {
           displayName: name
@@ -142,6 +145,21 @@ const useFirebase = () => {
     });
     return () => unsubscribed;
   }, []);
+
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch('https://obscure-river-28202.herokuapp.com/users', {
+      method: method,
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then()
+  }
+
+
+
   return {
     user,
     email,
