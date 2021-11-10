@@ -1,0 +1,13 @@
+/* .card-img-top {
+    height: 25em;
+    object-fit: cover;
+} */
+
+.agent-card-img {
+    width: 100% !important;
+    border-radius: 50% !important;
+}
+
+.agent-card {
+    background-color: aquamarine;
+}
