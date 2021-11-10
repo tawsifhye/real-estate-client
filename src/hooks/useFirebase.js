@@ -23,6 +23,7 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLogin, setIsLogin] = useState(false);
+  const [admin, setAdmin] = useState(false);
   const auth = getAuth();
 
   //google sign in
@@ -133,9 +134,16 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+  //checking is user admin or not
+  useEffect(() => {
+    fetch(`https://obscure-river-28202.herokuapp.com/users/${user.email}`)
+      .then(res => res.json())
+      .then(data => setAdmin(data.admin))
+  }, [user.email])
   //observe user state change
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
+      setIsLoading(true);
       if (user) {
         setUser(user);
       } else {
@@ -159,7 +167,6 @@ const useFirebase = () => {
   }
 
 
-
   return {
     user,
     email,
@@ -175,6 +182,7 @@ const useFirebase = () => {
     toggleLogin,
     registerNewUser,
     isLogin,
+    admin,
     logOut,
     isLoading,
   };
