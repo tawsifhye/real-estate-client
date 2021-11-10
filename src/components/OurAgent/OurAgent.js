@@ -25,9 +25,9 @@ const OurAgent = () => {
             <div className="container text-center py-5">
                 <h1>Meet Our Agents</h1>
                 <div className="mt-5">
-                    <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 row-cols-xl-4 g-4 mb-5 mx-auto">
+                    <div className="row ">
                         {agents.map(agent => (
-                            <div class="card mx-auto" style={{ width: "16rem", padding: "0" }}>
+                            <div class="card mx-auto my-2" style={{ width: "16rem", padding: "0" }}>
                                 <img src={agent.image} class="card-img-top img-fluid" alt="..." />
                                 <div class="card-body">
                                     <h5 class="card-title">{agent.name}</h5>
