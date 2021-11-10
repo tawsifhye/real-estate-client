@@ -11,7 +11,7 @@ const Home = () => {
         <>
             <Banner></Banner>
             {/* Service Section Starts*/}
-            <div id="service" className="container">
+            <div id="service" className="">
                 <Services></Services>
             </div>
             {/* service Section Ends */}
