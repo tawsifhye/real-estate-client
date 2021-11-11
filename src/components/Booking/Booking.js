@@ -29,7 +29,7 @@ const Booking = () => {
             .then(res => {
                 console.log(res);
                 if (res.data.acknowledged) {
-                    window.confirm("Booking Successful");
+                    window.alert("Booking Successful");
                     reset()
                 }
             })
