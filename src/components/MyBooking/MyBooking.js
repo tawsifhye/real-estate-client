@@ -30,7 +30,7 @@ const MyBooking = () => {
     }
     return (
         <div className='mybooking-container'>
-            <div className='text-center mybooking-main-container mybooking-custom-font'>
+            <div className='text-center container mybooking-custom-font'>
                 <h3 className="p-4">Manage Your Booking</h3>
                 {!items && (<div className="text-center">
                     <div class="spinner-grow text-danger text-center" role="status">

@@ -4,6 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import UserRoute from '../UserRoute/UserRoute';
 import Payment from '../Payment/Payment'
 import MyBooking from '../MyBooking/MyBooking'
+import AddReview from '../AddReview/AddReview';
 
 const Dashboard = () => {
     const [path, setPath] = useState("");
@@ -34,6 +35,7 @@ const Dashboard = () => {
                         {path === "" && <h2 className="text-center text-primary">Dashboard Home</h2>}
                         {path === "payment" && <Payment></Payment>}
                         {path === "myorders" && <MyBooking></MyBooking>}
+                        {path === "addreview" && <AddReview></AddReview>}
                     </div>
                 </div>
             </div>
