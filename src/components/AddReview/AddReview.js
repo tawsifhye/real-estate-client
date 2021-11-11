@@ -8,7 +8,7 @@ const AddReview = () => {
     const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://obscure-river-28202.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.acknowledged) {
                     window.confirm("Review Added");
