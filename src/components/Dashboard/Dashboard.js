@@ -6,7 +6,7 @@ import Payment from '../Payment/Payment'
 import MyBooking from '../MyBooking/MyBooking'
 import AddReview from '../AddReview/AddReview';
 import AdminRoutes from '../AdminRoutes/AdminRoutes';
-
+import ManageOrders from '../ManageOrders/ManageOrders'
 const Dashboard = () => {
     const { logOut, admin } = useAuth();
     const [path, setPath] = useState("");
@@ -27,7 +27,7 @@ const Dashboard = () => {
                             <button className="btn btn-warning" onClick={goBack}>Go Back</button>
                         </div>
                         {!admin && <UserRoute path={path} setPath={setPath}></UserRoute>}
-                        <AdminRoutes></AdminRoutes>
+                        <AdminRoutes setPath={setPath}></AdminRoutes>
                         <div className="text-center mt-2">
                             <button className="btn btn-danger" onClick={logOut}>Logout</button>
                         </div>
@@ -38,6 +38,7 @@ const Dashboard = () => {
                         {path === "payment" && <Payment></Payment>}
                         {path === "myorders" && <MyBooking></MyBooking>}
                         {path === "addreview" && <AddReview></AddReview>}
+                        {path === "manageallorders" && <ManageOrders></ManageOrders>}
                     </div>
                 </div>
             </div>

@@ -13,3 +13,8 @@
 .allbooking-main-container {
     flex: 1;
 }
+
+.select-status li:hover {
+    cursor: pointer;
+    background-color: rgb(148, 148, 148);
+}
