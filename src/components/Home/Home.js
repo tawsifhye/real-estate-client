@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review'
 import './Home.css'
 import OurAgent from '../OurAgent/OurAgent';
@@ -14,12 +13,17 @@ const Home = () => {
             <Header></Header>
             <Banner></Banner>
             {/* Service Section Starts*/}
-            <div id="service" className="">
+            <div id="service" className="mb-5">
                 <Services></Services>
             </div>
             {/* service Section Ends */}
-            <Review></Review>
-            <OurAgent></OurAgent>
+            <div className="pt-5">
+                <Review></Review>
+            </div>
+            <div className="pt-5">
+                <OurAgent></OurAgent>
+            </div>
+
             <Footer></Footer>
         </>
     );
