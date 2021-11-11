@@ -7,10 +7,10 @@ import MyBooking from '../MyBooking/MyBooking'
 import AddReview from '../AddReview/AddReview';
 
 const Dashboard = () => {
+    const { logOut, admin } = useAuth();
     const [path, setPath] = useState("");
     const location = useLocation();
     const history = useHistory();
-    const { logOut } = useAuth();
     console.log(path);
     const goBack = () => {
         const redirect_uri = location.state?.from || "/home";
