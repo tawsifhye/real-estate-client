@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactStars from "react-rating-stars-component";
 import './Review.css'
 
 
@@ -37,7 +38,16 @@ const Review = () => {
                                         <div key={review._id}>
                                             <div class="shadow p-3 mb-5 bg-body rounded">
                                                 <h6>{review.name}</h6>
-                                                <p>Rating: {review.rating}</p>
+                                                <ReactStars
+                                                    count={5}
+                                                    value={review.rating}
+                                                    isHalf={true}
+                                                    edit={false}
+                                                    size={30}
+
+                                                    activeColor="#ffcb24"
+                                                />
+                                                <p>Rating: </p>
                                                 <p>{review.comment}</p>
                                             </div>
                                         </div>
