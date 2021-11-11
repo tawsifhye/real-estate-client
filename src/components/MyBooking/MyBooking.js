@@ -33,8 +33,8 @@ const MyBooking = () => {
             <div className='text-center container mybooking-custom-font'>
                 <h3 className="p-4">Manage Your Booking</h3>
                 {!items && (<div className="text-center">
-                    <div class="spinner-grow text-danger text-center" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-grow text-danger text-center" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>)}
                 {items.map(item => <div key={item._id} className="shadow-sm p-3 mb-5 bg-body rounded">

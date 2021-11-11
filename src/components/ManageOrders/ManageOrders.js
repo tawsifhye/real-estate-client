@@ -65,8 +65,8 @@ const ManageOrders = () => {
                                     <small>Email: {booking.email}</small> <br />
                                     <small>Current Status: {booking.status}</small>
                                     <div className="mt-2 d-flex justify-content-center">
-                                        <div class="ms-2">
-                                            <select class="form-select" onChange=
+                                        <div className="ms-2">
+                                            <select className="form-select" onChange=
                                                 {statusChange} aria-label="Default select example">
                                                 <option selected>Change Status</option>
                                                 <option value="Approved">Approve</option>

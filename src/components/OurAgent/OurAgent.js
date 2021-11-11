@@ -27,10 +27,10 @@ const OurAgent = () => {
                 <div className="mt-5">
                     <div className="row ">
                         {agents.map(agent => (
-                            <div class="card agent-card mx-auto my-2" style={{ width: "16rem", padding: "0" }}>
-                                <img src={agent.image} class="card-img-top img-fluid" alt="..." />
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">{agent.name}</h5>
+                            <div className="card agent-card mx-auto my-2" style={{ width: "16rem", padding: "0" }}>
+                                <img src={agent.image} className="card-img-top img-fluid" alt="..." />
+                                <div className="card-body">
+                                    <h5 className="card-title text-white">{agent.name}</h5>
                                 </div>
                             </div>
                         ))}

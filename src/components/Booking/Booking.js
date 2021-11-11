@@ -40,8 +40,8 @@ const Booking = () => {
             <Header />
             <div className="booking-container">
                 {!details && (<div className="text-center">
-                    <div class="spinner-grow text-danger text-center" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-grow text-danger text-center" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>)}
                 <div className="container">

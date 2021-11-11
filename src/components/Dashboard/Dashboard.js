@@ -7,6 +7,7 @@ import MyBooking from '../MyBooking/MyBooking'
 import AddReview from '../AddReview/AddReview';
 import AdminRoutes from '../AdminRoutes/AdminRoutes';
 import ManageOrders from '../ManageOrders/ManageOrders'
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
 const Dashboard = () => {
     const { logOut, admin } = useAuth();
     const [path, setPath] = useState("");
@@ -26,8 +27,9 @@ const Dashboard = () => {
                         <div className="text-center mb-4">
                             <button className="btn btn-warning" onClick={goBack}>Go Back</button>
                         </div>
-                        {!admin && <UserRoute path={path} setPath={setPath}></UserRoute>}
-                        <AdminRoutes setPath={setPath}></AdminRoutes>
+                        {!admin && <UserRoute setPath={setPath}></UserRoute>}
+                        {admin && <AdminRoutes setPath={setPath}></AdminRoutes>}
+                        {/* <AdminRoutes setPath={setPath}></AdminRoutes> */}
                         <div className="text-center mt-2">
                             <button className="btn btn-danger" onClick={logOut}>Logout</button>
                         </div>
@@ -39,6 +41,7 @@ const Dashboard = () => {
                         {path === "myorders" && <MyBooking></MyBooking>}
                         {path === "addreview" && <AddReview></AddReview>}
                         {path === "manageallorders" && <ManageOrders></ManageOrders>}
+                        {path === "makeadmin" && <MakeAdmin></MakeAdmin>}
                     </div>
                 </div>
             </div>

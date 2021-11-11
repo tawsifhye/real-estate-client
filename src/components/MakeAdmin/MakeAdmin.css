@@ -1,0 +1,11 @@
+.admin-form-container input[type="email"] {
+    border: none;
+    border-bottom: 2px solid royalblue;
+    margin-bottom: 5%;
+}
+
+.admin-form-container input[type="email"]:focus {
+    outline: none;
+    border-bottom: 2px solid royalblue;
+
+}

@@ -16,8 +16,8 @@ const ExploreServices = () => {
                 <h1 className="text-center mt-3">Our Projects</h1>
                 < div className="container-fluid row mx-auto">
                     {!properties && (<div className="text-center">
-                        <div class="spinner-grow text-danger text-center" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                        <div className="spinner-grow text-danger text-center" role="status">
+                            <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>)}
                     <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xl-3 g-4 mb-5 mx-auto">

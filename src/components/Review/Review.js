@@ -25,18 +25,18 @@ const Review = () => {
                             <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>)}
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div className="accordion" id="accordionExample">
+                        <div className="accordion-item">
+                            <h2 className="accordion-header" id="headingOne">
+                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <h3 className="text-primary">Testimonial</h3>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
+                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div className="accordion-body">
                                     {reviews.map(review =>
                                         <div key={review._id}>
-                                            <div class="shadow p-3 mb-5 bg-body rounded">
+                                            <div className="shadow p-3 mb-5 bg-body rounded">
                                                 <h6>{review.name}</h6>
                                                 <ReactStars
                                                     count={5}
