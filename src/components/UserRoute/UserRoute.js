@@ -1,8 +1,6 @@
-import React, { createContext, useState } from 'react';
-import Dashboard from '../Dashboard/Dashboard';
 import './UserRoute.css'
-const UserRoute = () => {
-    const [path, setPath] = useState("");
+
+const UserRoute = ({ patth, setPath }) => {
     const linkClick = (value) => {
         console.log(value);
     }
@@ -13,8 +11,8 @@ const UserRoute = () => {
                 <li class="list-group-item" aria-current="true" onClick={() => setPath("payment")}>
                     Payment
                 </li>
-                <li class="list-group-item" onClick={linkClick}>My Orders</li>
-                <li class="list-group-item" onClick={linkClick}>Review</li>
+                <li class="list-group-item" onClick={() => setPath("myorders")}>My Orders</li>
+                <li class="list-group-item" onClick={() => setPath("addreview")}>Add Review</li>
             </ul>
 
         </>

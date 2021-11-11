@@ -6,17 +6,17 @@ import './MyBooking.css'
 const MyBooking = () => {
     const { user } = useAuth();
     const [isdeleted, setIsDeleted] = useState(false);
-    const [events, setEvents] = useState([]);
+    const [items, setItems] = useState([]);
     const email = user.email;
     useEffect(() => {
-        fetch(`https://young-crag-40635.herokuapp.com/bookedevents/${email}`)
+        fetch(`https://obscure-river-28202.herokuapp.com/bookedproperties/${email}`)
             .then(res => res.json())
-            .then(data => setEvents(data))
+            .then(data => setItems(data))
     }, [email, isdeleted])
     const deleteEvent = (id) => {
         const proceed = window.confirm('Cancel Booking!Are you sure?');
         if (proceed) {
-            fetch(`https://young-crag-40635.herokuapp.com/bookedevents/${id}`, {
+            fetch(`https://obscure-river-28202.herokuapp.com/bookedproperties/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -31,20 +31,20 @@ const MyBooking = () => {
     return (
         <div className='mybooking-container'>
             <div className='text-center mybooking-main-container mybooking-custom-font'>
-                <h1 className="p-4">Manage Your Booking</h1>
-                {!events && (<div className="text-center">
+                <h3 className="p-4">Manage Your Booking</h3>
+                {!items && (<div className="text-center">
                     <div class="spinner-grow text-danger text-center" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>)}
-                {events.map(event => <div key={event._id} className="shadow-sm p-3 mb-5 bg-body rounded">
-                    <h5>{event.title}</h5>
-                    <p>Name: {event.name}</p>
-                    <p>Contact: {event.contact}</p>
-                    <p>Email: {event.email}</p>
-                    <p>Booking Date: {event.startDate} to {event.endDate}</p>
-                    <p>Status: {event.status}</p>
-                    <button onClick={() => deleteEvent(event._id)} className="btn btn-danger"><FontAwesomeIcon icon={faEraser} /> Cancel</button>
+                {items.map(item => <div key={item._id} className="shadow-sm p-3 mb-5 bg-body rounded">
+                    <h5>{item.orderTitle}</h5>
+                    <p>Name: {item.name}</p>
+                    <p>Contact: {item.contact}</p>
+                    <p>Email: {item.email}</p>
+                    <p>Booked On: {item.orderTime}</p>
+                    <p>Status: {item.status}</p>
+                    <button onClick={() => deleteEvent(item._id)} className="btn btn-danger"><FontAwesomeIcon icon={faEraser} /> Cancel</button>
                 </div>)}
             </div>
         </div>
