@@ -1,9 +1,6 @@
 import './UserRoute.css'
 
-const UserRoute = ({ patth, setPath }) => {
-    const linkClick = (value) => {
-        console.log(value);
-    }
+const UserRoute = ({ setPath }) => {
     return (
         <>
 

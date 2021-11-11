@@ -5,6 +5,7 @@ import UserRoute from '../UserRoute/UserRoute';
 import Payment from '../Payment/Payment'
 import MyBooking from '../MyBooking/MyBooking'
 import AddReview from '../AddReview/AddReview';
+import AdminRoutes from '../AdminRoutes/AdminRoutes';
 
 const Dashboard = () => {
     const { logOut, admin } = useAuth();
@@ -26,7 +27,7 @@ const Dashboard = () => {
                             <button className="btn btn-warning" onClick={goBack}>Go Back</button>
                         </div>
                         {!admin && <UserRoute path={path} setPath={setPath}></UserRoute>}
-
+                        <AdminRoutes></AdminRoutes>
                         <div className="text-center mt-2">
                             <button className="btn btn-danger" onClick={logOut}>Logout</button>
                         </div>

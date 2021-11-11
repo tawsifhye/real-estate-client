@@ -1,0 +1,8 @@
+.admin-route li:hover {
+    cursor: pointer;
+}
+
+.admin-route li:active {
+    background-color: rgb(147, 172, 172);
+    color: white;
+}
