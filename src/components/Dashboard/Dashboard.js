@@ -25,7 +25,8 @@ const Dashboard = () => {
                         <div className="text-center mb-4">
                             <button className="btn btn-warning" onClick={goBack}>Go Back</button>
                         </div>
-                        <UserRoute path={path} setPath={setPath}></UserRoute>
+                        {!admin && <UserRoute path={path} setPath={setPath}></UserRoute>}
+
                         <div className="text-center mt-2">
                             <button className="btn btn-danger" onClick={logOut}>Logout</button>
                         </div>
