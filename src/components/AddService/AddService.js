@@ -7,7 +7,6 @@ const AddService = () => {
     const onSubmit = (data) => {
         axios.post('https://obscure-river-28202.herokuapp.com/properties', data)
             .then(res => {
-                console.log(res.data);
                 if (res.data.insertedId) {
                     alert("Service added successful");
                     reset();
