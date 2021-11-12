@@ -11,8 +11,8 @@ const AdminRoutes = ({ setPath }) => {
                 </li>
                 <li className="list-group-item" onClick={() => setPath("addservice")}>
                     Add Service</li>
-                <li className="list-group-item" onClick={() => setPath("removeservice")}>
-                    Remove Service</li>
+                <li className="list-group-item" onClick={() => setPath("manageservice")}>
+                    Manage Service</li>
             </ul>
         </div>
     );

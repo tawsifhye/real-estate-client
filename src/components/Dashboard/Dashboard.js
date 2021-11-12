@@ -9,6 +9,7 @@ import AdminRoutes from '../AdminRoutes/AdminRoutes';
 import ManageOrders from '../ManageOrders/ManageOrders'
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddService from '../AddService/AddService';
+import ManageService from '../ManageService/ManageService';
 const Dashboard = () => {
     const { logOut, admin } = useAuth();
     const [path, setPath] = useState("");
@@ -44,6 +45,7 @@ const Dashboard = () => {
                         {path === "manageallorders" && <ManageOrders></ManageOrders>}
                         {path === "makeadmin" && <MakeAdmin></MakeAdmin>}
                         {path === "addservice" && <AddService></AddService>}
+                        {path === "manageservice" && <ManageService></ManageService>}
                     </div>
                 </div>
             </div>

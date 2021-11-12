@@ -13,7 +13,7 @@ const MyBooking = () => {
             .then(res => res.json())
             .then(data => setItems(data))
     }, [email, isdeleted])
-    const deleteEvent = (id) => {
+    const deleteBooking = (id) => {
         const proceed = window.confirm('Cancel Booking!Are you sure?');
         if (proceed) {
             fetch(`https://obscure-river-28202.herokuapp.com/bookedproperties/${id}`, {
@@ -44,7 +44,7 @@ const MyBooking = () => {
                     <p>Email: {item.email}</p>
                     <p>Booked On: {item.orderTime}</p>
                     <p>Status: {item.status}</p>
-                    <button onClick={() => deleteEvent(item._id)} className="btn btn-danger"><FontAwesomeIcon icon={faEraser} /> Cancel</button>
+                    <button onClick={() => deleteBooking(item._id)} className="btn btn-danger"><FontAwesomeIcon icon={faEraser} /> Cancel</button>
                 </div>)}
             </div>
         </div>
