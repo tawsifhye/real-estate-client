@@ -6,7 +6,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         axios.put(`https://obscure-river-28202.herokuapp.com/users/${data.email}`)
             .then(res => {
-                if (res.data.modifiedCount || res.data.upsertedCount) {
+                if (res.data.modifiedCount) {
                     alert("Admin add successful")
                 }
                 if (res.data.isAdmin) {
