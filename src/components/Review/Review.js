@@ -46,7 +46,6 @@ const Review = () => {
 
                                                     activeColor="#ffcb24"
                                                 />
-                                                <p>Rating: </p>
                                                 <p>{review.comment}</p>
                                             </div>
                                         </div>
