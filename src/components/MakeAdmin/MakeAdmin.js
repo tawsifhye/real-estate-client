@@ -2,18 +2,21 @@ import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import "./MakeAdmin.css"
 const MakeAdmin = () => {
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         axios.put(`https://obscure-river-28202.herokuapp.com/users/${data.email}`)
             .then(res => {
                 if (res.data.modifiedCount) {
                     alert("Admin add successful")
+                    return;
                 }
                 if (res.data.isAdmin) {
                     alert("User already a Admin")
+                    return;
                 }
-                if (!res.data.registered) {
+                if (!res.data.isRegistered) {
                     alert("Not Registered! Please resister")
+                    return;
                 }
             })
     };
