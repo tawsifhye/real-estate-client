@@ -25,13 +25,13 @@ const ManageService = () => {
     return (
         <>
             <h3 className="text-center">Manage Service</h3>
-             {!properties && (<div className="text-center">
-                        <div className="spinner-grow text-danger text-center" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
-                    </div>)}
-            <div class="table-responsive ">
-                <table class="table table-dark table-hover">
+            {!properties && (<div className="text-center">
+                <div className="spinner-grow text-danger text-center" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>)}
+            <div className="table-responsive ">
+                <table className="table table-dark table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Project Name</th>

@@ -8,13 +8,13 @@ const MakeAdmin = () => {
             .then(res => {
                 if (res.data.modifiedCount || res.data.upsertedCount) {
                     alert("Admin add successful")
-                    reset();
-
                 }
                 if (res.data.isAdmin) {
                     alert("User already a Admin")
                 }
-
+                if (!res.data.registered) {
+                    alert("Not Registered! Please resister")
+                }
             })
     };
     return (
