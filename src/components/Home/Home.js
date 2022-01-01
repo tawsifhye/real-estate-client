@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Banner from '../Banner/Banner';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Counter from '../Counter/Counter';
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
                 <Services></Services>
             </div>
             {/* service Section Ends */}
+            {/* <Counter></Counter> */}
             <div className="pt-5">
                 <Review></Review>
             </div>
